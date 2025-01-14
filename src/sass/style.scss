@@ -1,0 +1,56 @@
+@use './colors' as *;
+@import './iphone';
+@import './mac';
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Public Sans', serif;
+	background-color: $verylightgray;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.attribution {
+	font-size: 1.2rem;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1440px;
+}
+.invite {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	font-weight: 500;
+	width: 180px;
+	height: 50px;
+	background-image: $gradient;
+	border-radius: 1em;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 1.6rem;
+}
+.invite:hover {
+	scale: 0.9;
+}
+.inline-padding {
+	padding-inline: 2.8em;
+}
+.section-padding {
+	padding: 4em 2em;
+}

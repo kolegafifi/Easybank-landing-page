@@ -1,0 +1,248 @@
+@media (min-width: 768px) {
+	.nav {
+		&__container {
+			padding-block: 2em;
+		}
+		&__burger {
+			display: none;
+		}
+		&__items {
+			display: flex;
+			gap: 1.5em;
+			font-size: 1.6rem;
+		}
+		&__item {
+			color: $grayblue;
+		}
+		&__item {
+			position: relative;
+			transition: 0.3s;
+		}
+		&__item:hover {
+			color: $darkblue;
+		}
+		&__item::after {
+			content: '';
+			position: absolute;
+			bottom: -2.05em;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			height: 6px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-image: $gradient;
+			opacity: 0;
+			transition: 0.3s;
+		}
+		&__item:hover::after {
+			content: '';
+			position: absolute;
+			bottom: -2.05em;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			height: 6px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			background-image: $gradient;
+			opacity: 1;
+		}
+		&__invite {
+			display: flex;
+		}
+	}
+	.header {
+		overflow: hidden;
+		&__container {
+			flex-direction: row;
+			&__hero-img {
+				overflow: visible;
+				order: 2;
+				width: 60%;
+				&__img1 {
+					scale: 1.2;
+					right: -10em;
+					height: 100%;
+					width: 100%;
+				}
+				&__img2 {
+					position: relative;
+					left: 30em;
+				}
+			}
+			&__hero-text {
+				width: 40%;
+				text-align: left;
+				.invite {
+					margin-left: 0;
+				}
+			}
+			&__title {
+				font-size: 5.5rem;
+				font-weight: 300;
+			}
+			&__p {
+				max-width: 500px;
+				text-align: left;
+			}
+		}
+	}
+	.main {
+		&__whyus {
+			text-align: left;
+			&__h2 {
+				font-size: 4.6rem;
+				text-align: left;
+				margin-left: 0.5em;
+			}
+			&__p {
+				font-size: 2rem;
+				margin-bottom: 5em;
+				margin-left: 1.2em;
+			}
+			&__items {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+				width: 100%;
+			}
+			&__item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				margin-block: 2.4em;
+				margin-inline: 2.4em;
+				&__icon {
+					margin-bottom: 1.7em;
+				}
+				&__title {
+					font-size: 2.6rem;
+				}
+				&__p {
+					font-size: 1.6rem;
+				}
+			}
+		}
+		&__articles {
+			text-align: left;
+			&__h2 {
+				margin-left: 0.5em;
+				font-size: 4.6rem;
+			}
+			&__item {
+				cursor: pointer;
+				&__title {
+					transition: 0.3s;
+				}
+			}
+			&__item:hover &__item__title {
+				color: $limegreen;
+			}
+		}
+	}
+
+	.footer {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		}
+		&__left-side {
+			width: 30%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: column;
+			height: 100px;
+			&__logo {
+				stroke: white;
+				scale: 1.1;
+			}
+
+			&__items {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+				margin-top: 2em;
+				gap: 1.2em;
+			}
+		}
+		&__lists {
+			display: flex;
+			justify-content: space-around;
+			flex-direction: row;
+			margin-block: 0em;
+			margin-inline: 3em;
+			width: 40%;
+			&__list1 {
+				display: flex;
+				// justify-content: center;
+				// align-items: center;
+				flex-direction: column;
+				gap: 1.4em;
+				margin-bottom: 1.4em;
+				&__item {
+					text-decoration: none;
+					color: $white;
+					font-size: 1.6rem;
+				}
+			}
+			&__list2 {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				gap: 1.4em;
+				&__item {
+					text-decoration: none;
+					color: $white;
+					font-size: 1.6rem;
+				}
+			}
+		}
+		&__right-side {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 1em;
+			width: 30%;
+			height: 120px;
+			&__p {
+				color: $lightgrayblue;
+				font-size: 1.4rem;
+				margin-top: 2em;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.main {
+		&__articles {
+			&__items {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			&__item {
+				flex: 1 1 100%;
+			}
+		}
+	}
+}
+@media (min-width: 1300px) {
+	.main {
+		&__articles {
+			&__items {
+				flex-direction: row;
+				justify-content: center;
+				flex-wrap: nowrap;
+			}
+		}
+	}
+}
